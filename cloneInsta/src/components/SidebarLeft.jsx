@@ -54,6 +54,7 @@ function SidebarLeft() {
         <NavLink to="/profile" className="menu-item" data-label="Perfil">
           <CgProfile />
         </NavLink>
+        
 
       </nav>
 

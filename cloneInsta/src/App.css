@@ -1,3 +1,21 @@
+/* 🌙 DARK (PADRÃO) */
+:root {
+  --bg: #000;
+  --text: #fff;
+  --card: #000;
+  --border: #262626;
+  --input-bg: #121212;
+}
+
+/* ☀️ LIGHT */
+.light {
+  --bg: #fff;
+  --text: #000;
+  --card: #fff;
+  --border: #dbdbdb;
+  --input-bg: #fafafa;
+}
+
 /* RESET */
 body {
   margin: 0;
@@ -371,8 +389,8 @@ body {
 
 /* SIDEBAR DIREITA */
 .sidebar-right {
-  width: 300px;
-  padding: 20px;
+  width: 600px;
+  padding: 60px;
   color: white;
 }
 
@@ -575,11 +593,11 @@ body {
   z-index: 2;
 }
 /* SIDEBAR DIREITA */
-.sidebar-right {
+/* .sidebar-right {
   width: 300px;
   padding: 20px;
   color: white;
-}
+} */
 
 /* PERFIL */
 .profile {
@@ -739,3 +757,110 @@ body {
   transform: scale(1.1);
   z-index: 2;
 }
+
+/* 🔥 FLOATING DIRECT IGUAL INSTAGRAM */
+.direct-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  background: #262626;
+  border-radius: 30px;
+  padding: 10px 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* HOVER */
+.direct-floating:hover {
+  background: #333;
+}
+
+/* ÍCONE */
+.direct-icon {
+  position: relative;
+  font-size: 18px;
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+
+  background: red;
+  color: white;
+  font-size: 10px;
+
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+/* TEXTO */
+.direct-text {
+  color: white;
+  font-size: 14px;
+}
+
+/* AVATARES */
+.direct-avatars {
+  display: flex;
+  align-items: center;
+}
+
+.direct-avatars img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #262626;
+  margin-left: -8px;
+}
+
+.direct-avatars img:first-child {
+  margin-left: 0;
+}
+
+/* COMENTÁRIOS */
+.post-comments {
+  padding: 0 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.post-comments p {
+  margin: 5px 0;
+}
+
+/* CAIXA DE COMENTÁRIO */
+.comment-box {
+  display: flex;
+  border-top: 1px solid #262626;
+  padding: 8px;
+}
+
+.comment-box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  font-size: 14px;
+}
+
+.comment-box input::placeholder {
+  color: #737373;
+}
+
+.comment-box button {
+  background: none;
+  border: none;
+  color: #0095f6;
+  cursor: pointer;
+  font-weight: bold;
+}
+

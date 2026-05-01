@@ -1,8 +1,10 @@
 import { Routes, Route } from 'react-router-dom'
 import SidebarLeft from './components/SidebarLeft'
 import SidebarRight from './components/SidebarRight'
+import DirectFloating from './components/DirectFloating'
 import Feed from './components/Feed'
 import './App.css'
+
 
 function Home() {
   return <Feed />
@@ -24,10 +26,8 @@ function App() {
   return (
     <div className="layout">
 
-      {/* SIDEBAR ESQUERDA */}
       <SidebarLeft />
 
-      {/* CONTEÚDO CENTRAL */}
       <div className="main">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -37,8 +37,10 @@ function App() {
         </Routes>
       </div>
 
-      {/* SIDEBAR DIREITA */}
       <SidebarRight />
+
+      {/* 🔥 AQUI QUE FALTAVA */}
+      <DirectFloating />
 
     </div>
   )

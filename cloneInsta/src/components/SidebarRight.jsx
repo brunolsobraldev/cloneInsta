@@ -1,9 +1,6 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
 
 function SidebarRight() {
-  const navigate = useNavigate()
-
   const [suggestions, setSuggestions] = useState([
     {
       name: "ana.dev",
@@ -69,7 +66,7 @@ function SidebarRight() {
         </div>
       ))}
 
-      {/* 🔥 LINKS IGUAL INSTAGRAM */}
+      {/* LINKS */}
       <div className="insta-links">
         <span>Sobre</span> • <span>Ajuda</span> • <span>Imprensa</span> • 
         <span>API</span> • <span>Carreiras</span> • <span>Privacidade</span> • 
@@ -77,25 +74,9 @@ function SidebarRight() {
         <span>Meta Verified</span>
       </div>
 
+      {/* COPYRIGHT */}
       <div className="copyright">
         © 2025 Instagram from Meta
-      </div>
-
-      {/* 🔥 DIRECT IGUAL INSTAGRAM */}
-      <div className="direct-box" onClick={() => navigate("/messages")}>
-
-        <div className="direct-header">
-          <span className="icon">💬</span>
-          <span>Mensagens</span>
-          <span className="badge">3</span>
-        </div>
-
-        <div className="direct-users">
-          <img src="https://i.pravatar.cc/30?img=10" />
-          <img src="https://i.pravatar.cc/30?img=11" />
-          <img src="https://i.pravatar.cc/30?img=12" />
-        </div>
-
       </div>
 
     </div>
