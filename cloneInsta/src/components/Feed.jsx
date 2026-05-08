@@ -1,6 +1,10 @@
 import Stories from "./Stories"
 import Post from "./Post"
 
+import rolezinBruno from "../assets/rolezinBruno.png"
+import rolezinDev from "../assets/rolezinDev.png"
+import perfilBruno from "../assets/perfilBruno.png"
+
 function Feed() {
   return (
     <div className="feed">
@@ -8,15 +12,17 @@ function Feed() {
       <Stories />
 
       <Post 
-        username="bruno"
-        image="https://picsum.photos/500/500?1"
-        caption="Primeiro post 🔥"
+        username="Bruno Lopes"
+        profilePic={perfilBruno}
+        image={rolezinBruno}
+        caption="A cabeça tá em 4K e o corpo carregando em 144p 💀"
       />
 
       <Post 
-        username="dev"
-        image="https://picsum.photos/500/500?2"
-        caption="Aprendendo React 🚀"
+        username="Lopes Urban"
+        profilePic={perfilBruno}
+        image={rolezinDev}
+        caption="Quem tem presença, usa Lopes Urban."
       />
 
     </div>

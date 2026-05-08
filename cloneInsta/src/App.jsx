@@ -1,10 +1,13 @@
 import { Routes, Route } from 'react-router-dom'
+import { useState } from 'react'
+
 import SidebarLeft from './components/SidebarLeft'
 import SidebarRight from './components/SidebarRight'
-import DirectFloating from './components/DirectFloating'
 import Feed from './components/Feed'
-import './App.css'
+import DirectFloating from './components/DirectFloating'
+import MessageButton from './components/MessageButton'
 
+import './App.css'
 
 function Home() {
   return <Feed />
@@ -23,11 +26,16 @@ function Profile() {
 }
 
 function App() {
+
+  const [openDirect, setOpenDirect] = useState(false)
+
   return (
     <div className="layout">
 
+      {/* ESQUERDA */}
       <SidebarLeft />
 
+      {/* CENTRO */}
       <div className="main">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -37,10 +45,16 @@ function App() {
         </Routes>
       </div>
 
-      <SidebarRight />
+      {/* DIREITA */}
+      <SidebarRight setOpenDirect={setOpenDirect} />
 
-      {/* 🔥 AQUI QUE FALTAVA */}
-      <DirectFloating />
+<MessageButton setOpenDirect={setOpenDirect} />
+
+      {/* DIRECT */}
+      {openDirect && (
+        
+        <DirectFloating setOpenDirect={setOpenDirect} />
+      )}
 
     </div>
   )

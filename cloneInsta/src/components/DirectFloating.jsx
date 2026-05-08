@@ -1,26 +1,107 @@
-import { useNavigate } from "react-router-dom"
+function DirectFloating({ setOpenDirect }) {
 
-function DirectFloating() {
-  const navigate = useNavigate()
+  const chats = [
+    {
+      name: "lizin.nk9",
+      msg: "Você: Veio só uma preta...",
+      time: "3 min",
+      img: "https://i.pravatar.cc/50?img=10",
+      unread: false
+    },
+
+    {
+      name: "Mascote e dois gorilas",
+      msg: "enviou um anexo.",
+      time: "1 h",
+      img: "https://i.pravatar.cc/50?img=11",
+      unread: true
+    },
+
+    {
+      name: "Carol",
+      msg: "Você: 😳",
+      time: "1 h",
+      img: "https://i.pravatar.cc/50?img=12",
+      unread: false
+    }
+  ]
 
   return (
-    <div className="direct-floating" onClick={() => navigate("/messages")}>
+    <div className="direct-popup">
 
-      {/* ÍCONE + BADGE */}
-      <div className="direct-icon">
-        💬
-        <span className="badge">7</span>
+      {/* HEADER */}
+      <div className="direct-popup-header">
+
+        <div className="direct-title">
+
+          <span>
+            Mensagens
+          </span>
+
+          <div className="direct-badge">
+            3
+          </div>
+
+        </div>
+
+        <div className="direct-header-icons">
+
+          <button>
+            ⛶
+          </button>
+
+          {/* FECHAR */}
+          <button
+            onClick={() => setOpenDirect(false)}
+          >
+            ✕
+          </button>
+
+        </div>
+
       </div>
 
-      {/* TEXTO */}
-      <span className="direct-text">Mensagens</span>
+      {/* LISTA */}
+      <div className="direct-chat-list">
 
-      {/* AVATARES */}
-      <div className="direct-avatars">
-        <img src="https://i.pravatar.cc/30?img=10" />
-        <img src="https://i.pravatar.cc/30?img=11" />
-        <img src="https://i.pravatar.cc/30?img=12" />
+        {chats.map((chat, index) => (
+
+          <div
+            key={index}
+            className="direct-chat"
+          >
+
+            <img
+              src={chat.img}
+              alt=""
+            />
+
+            <div className="direct-chat-info">
+
+              <strong>
+                {chat.name}
+              </strong>
+
+              <p>
+                {chat.msg} · {chat.time}
+              </p>
+
+            </div>
+
+            {chat.unread && (
+              <div className="unread-dot"></div>
+            )}
+
+          </div>
+
+        ))}
+
       </div>
+
+      {/* BOTÃO */}
+      <button className="new-message-btn">
+        ✎
+      </button>
 
     </div>
   )
