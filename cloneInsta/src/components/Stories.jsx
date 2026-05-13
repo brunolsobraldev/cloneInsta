@@ -14,6 +14,27 @@ function Stories() {
       ]
     },
     {
+      name: "art_rua",
+      stories: [
+        { type: "image", src: "https://picsum.photos/400/700?3", duration: 5000 },
+        { type: "image", src: "https://picsum.photos/400/700?4", duration: 5000 }
+      ]
+    },
+    {
+      name: "ost.pixelz",
+      stories: [
+        { type: "image", src: "https://picsum.photos/400/700?5", duration: 5000 },
+        { type: "image", src: "https://picsum.photos/400/700?6", duration: 5000 }
+      ]
+    },
+    {
+      name: "midnxght",
+      stories: [
+        { type: "image", src: "https://picsum.photos/400/700?7", duration: 5000 },
+        { type: "image", src: "https://picsum.photos/400/700?8", duration: 5000 }
+      ]
+    },
+    {
       name: "dev",
       stories: [
         { type: "image", src: "https://picsum.photos/400/700?3", duration: 5000 },

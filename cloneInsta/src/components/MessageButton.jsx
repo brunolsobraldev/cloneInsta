@@ -9,7 +9,7 @@ function MessageButton({ setOpenDirect }) {
       <div className="message-left">
 
         <span className="message-icon">
-          ✈
+          ➤
         </span>
 
         <span className="message-text">

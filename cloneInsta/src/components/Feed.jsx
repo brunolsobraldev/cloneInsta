@@ -4,6 +4,9 @@ import Post from "./Post"
 import rolezinBruno from "../assets/rolezinBruno.png"
 import rolezinDev from "../assets/rolezinDev.png"
 import perfilBruno from "../assets/perfilBruno.png"
+import urbanStyle from "../assets/urbanStyle.png"
+import jurikiJuriki from "../assets/Juriki.png"
+import roupa from "../assets/roupasUrban.png"
 
 function Feed() {
   return (
@@ -20,10 +23,18 @@ function Feed() {
 
       <Post 
         username="Lopes Urban"
-        profilePic={perfilBruno}
-        image={rolezinDev}
+        profilePic={rolezinDev}
+        image={roupa}
         caption="Quem tem presença, usa Lopes Urban."
       />
+      <Post 
+        username="JURIKI"
+        profilePic={jurikiJuriki}
+        image={urbanStyle}
+        caption="A justiça que fala sua lingua."
+      />
+      
+      
 
     </div>
   )

@@ -2,7 +2,7 @@ function DirectFloating({ setOpenDirect }) {
 
   const chats = [
     {
-      name: "lizin.nk9",
+       name: "Carol",
       msg: "Você: Veio só uma preta...",
       time: "3 min",
       img: "https://i.pravatar.cc/50?img=10",
@@ -10,7 +10,7 @@ function DirectFloating({ setOpenDirect }) {
     },
 
     {
-      name: "Mascote e dois gorilas",
+      name: "Andre Lps",
       msg: "enviou um anexo.",
       time: "1 h",
       img: "https://i.pravatar.cc/50?img=11",
@@ -18,7 +18,8 @@ function DirectFloating({ setOpenDirect }) {
     },
 
     {
-      name: "Carol",
+     
+      name: "lizin.nk9",
       msg: "Você: 😳",
       time: "1 h",
       img: "https://i.pravatar.cc/50?img=12",

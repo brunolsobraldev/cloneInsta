@@ -15,7 +15,7 @@ function SidebarRight() {
       following: false
     },
     {
-      name: "maria.ui",
+      name: "cleitin.ui",
       info: "Seguido por dev",
       img: "https://i.pravatar.cc/40?img=7",
       following: false
